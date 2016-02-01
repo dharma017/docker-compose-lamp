@@ -6,7 +6,7 @@ else
   echo 'Empty MySQL Directory. Installing...'
   mysql_install_db
   echo 'Setting password...'
-  mysqladmin -u root password $mysqlpassword
+  mysqladmin -u root password "$mysqlpassword"
   echo 'Starting MySQL...'
   mysqld_safe
 fi
