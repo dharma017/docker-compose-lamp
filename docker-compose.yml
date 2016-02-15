@@ -1,8 +1,8 @@
 data:
-  image: debian
+  image: busybox
   container_name: lamp-dev-data
   volumes: ["/var/www/html", "/var/lib/mysql"]
-  command: /bin/bash -c "echo 'Data Container' && while true; do sleep infinity; done"
+  entrypoint: /bin/sh -c "echo 'Setup Data Container'"
 mysql:
   image: webunitydesign/docker-compose-mysql
   container_name: lamp-dev-mysql
